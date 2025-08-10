@@ -1,0 +1,27 @@
+<svg width="200" height="80" viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="greenGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#9DC541;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7BA428;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0066cc;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#004499;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Circle Background -->
+  <circle cx="25" cy="25" r="20" fill="url(#greenGradient)"/>
+  
+  <!-- Road/Bridge Design -->
+  <path d="M20 35 L30 35 L35 25 L30 15 L25 20 L20 15 Z" fill="url(#blueGradient)"/>
+  <rect x="22" y="30" width="2" height="8" fill="url(#blueGradient)"/>
+  <rect x="26" y="30" width="2" height="8" fill="url(#blueGradient)"/>
+  
+  <!-- Company Name -->
+  <text x="55" y="25" fill="#333" font-family="Arial, sans-serif" font-size="16" font-weight="bold">KALINGA</text>
+  <text x="55" y="40" fill="#666" font-family="Arial, sans-serif" font-size="8" font-weight="normal">KONSULT&ENGINEERS</text>
+  
+  <!-- Decorative Line -->
+  <line x1="55" y1="43" x2="170" y2="43" stroke="#333" stroke-width="1"/>
+</svg>

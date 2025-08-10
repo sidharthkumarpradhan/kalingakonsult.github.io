@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Quotation - Kalinga Konsult &amp; Engineers</title>
+    <meta name="description" content="Professional construction and engineering consultancy services with 5+ years of expertise across Odisha. Specialized in DPR, aerial surveys, geotechnical investigation, and project management.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link href="/static/css/style.css" rel="stylesheet">
+    
+    
+</head>
+<body>
+    <!-- Navigation Header -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand d-flex align-items-center" href="/">
+                <img src="/static/images/kalinga-logo.png" alt="Kalinga Konsult &amp; Engineers" height="70" class="me-2">
+            </a>
+            
+            <!-- Mobile Toggle -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Navigation Menu -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link " href="/">
+                            <i class="fas fa-home me-1"></i>Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/projects">
+                            <i class="fas fa-building me-1"></i>Projects
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/quotation">
+                            <i class="fas fa-calculator me-1"></i>Quotation
+                        </a>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <a class="btn btn-primary btn-sm" href="tel:+918093584917">
+                            <i class="fas fa-phone me-1"></i>Call Now
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Flash Messages -->
+    
+        
+    
+
+    <!-- Main Content -->
+    <main>
+        
+<!-- Page Header -->
+<section class="page-header bg-primary text-white py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h1 class="display-4 fw-bold mb-3">Request Quotation</h1>
+                <p class="lead">Get a detailed quotation for your construction and engineering project</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <!-- Quotation Form -->
+            <div class="col-lg-8 mb-5">
+                <div class="card border-0 shadow">
+                    <div class="card-body p-4">
+                        <h3 class="mb-4">Project Details</h3>
+                        
+                        <form method="POST" novalidate>
+                            <input id="csrf_token" name="csrf_token" type="hidden" value="ImEzYTQzYmUxMWVjZjMzMjI3NWQyMzU3NGJmYzlkZDNmZGNmNDAyMDgi.aJgmVg.X8ZVsPifKGPJJC9WtKTAk_0ZNig">
+                            
+                            <div class="row g-3">
+                                <!-- Personal Information -->
+                                <div class="col-md-6">
+                                    <label for="name" class="form-label">Full Name <span class="text-danger">*</span></label>
+                                    <input class="form-control" id="name" maxlength="100" minlength="2" name="name" placeholder="Enter your full name" required type="text" value="">
+                                    
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label">Email Address <span class="text-danger">*</span></label>
+                                    <input class="form-control" id="email" name="email" placeholder="your.email@example.com" required type="email" value="">
+                                    
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <label for="phone" class="form-label">Phone Number <span class="text-danger">*</span></label>
+                                    <input class="form-control" id="phone" maxlength="15" minlength="10" name="phone" placeholder="+91 XXXXXXXXXX" required type="tel" value="">
+                                    
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <label for="company" class="form-label">Company/Organization</label>
+                                    <input class="form-control" id="company" maxlength="100" name="company" placeholder="Company name (optional)" type="text" value="">
+                                </div>
+                                
+                                <!-- Project Information -->
+                                <div class="col-12">
+                                    <hr class="my-4">
+                                    <h5 class="mb-3">Project Information</h5>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <label for="project_type" class="form-label">Project Type <span class="text-danger">*</span></label>
+                                    <select class="form-select" id="project_type" name="project_type" required><option value="">Select Project Type</option><option value="dpr">Detail Project Report (DPR)</option><option value="aerial_survey">Aerial &amp; Drone Survey</option><option value="geospatial_survey">Geospatial and Hydrological Survey</option><option value="project_management">Project Management Consultant</option><option value="architectural_design">Architectural and Building Design</option><option value="highway_design">Highway Design and Report</option><option value="geotechnical">Geotechnical Investigation</option><option value="field_testing">Field Exploration &amp; Testing</option><option value="other">Other</option></select>
+                                    
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <label for="project_location" class="form-label">Project Location <span class="text-danger">*</span></label>
+                                    <input class="form-control" id="project_location" maxlength="200" minlength="2" name="project_location" placeholder="City, District, State" required type="text" value="">
+                                    
+                                </div>
+                                
+                                <div class="col-12">
+                                    <label for="project_description" class="form-label">Project Description <span class="text-danger">*</span></label>
+                                    <textarea class="form-control" id="project_description" maxlength="1000" minlength="10" name="project_description" placeholder="Please provide detailed description of your project requirements, scope, and any specific needs..." required rows="5">
+</textarea>
+                                    
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <label for="budget_range" class="form-label">Budget Range <span class="text-danger">*</span></label>
+                                    <select class="form-select" id="budget_range" name="budget_range" required><option value="">Select Budget Range</option><option value="under_1l">Under ₹1 Lakh</option><option value="1l_5l">₹1 - 5 Lakh</option><option value="5l_10l">₹5 - 10 Lakh</option><option value="10l_25l">₹10 - 25 Lakh</option><option value="25l_50l">₹25 - 50 Lakh</option><option value="50l_1cr">₹50 Lakh - 1 Crore</option><option value="above_1cr">Above ₹1 Crore</option><option value="discuss">Prefer to Discuss</option></select>
+                                    
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <label for="timeline" class="form-label">Project Timeline <span class="text-danger">*</span></label>
+                                    <select class="form-select" id="timeline" name="timeline" required><option value="">Select Timeline</option><option value="urgent">Urgent (Within 1 month)</option><option value="1_3_months">1-3 Months</option><option value="3_6_months">3-6 Months</option><option value="6_12_months">6-12 Months</option><option value="above_1_year">More than 1 Year</option><option value="flexible">Flexible</option></select>
+                                    
+                                </div>
+                                
+                                <div class="col-12 mt-4">
+                                    <button type="submit" class="btn btn-primary btn-lg">
+                                        <i class="fas fa-paper-plane me-2"></i>Submit Quotation Request
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contact Information -->
+            <div class="col-lg-4">
+                <div class="card border-0 shadow mb-4">
+                    <div class="card-body p-4">
+                        <h5 class="mb-4">Contact Information</h5>
+                        
+                        <div class="contact-item mb-3">
+                            <div class="d-flex align-items-center">
+                                <div class="contact-icon">
+                                    <i class="fas fa-phone text-primary"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-1">Phone</h6>
+                                    <span><a href="tel:+918093584917" class="text-decoration-none">+918093584917</a>/<a href="tel:+919040165686" class="text-decoration-none">+919040165686</a></span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item mb-3">
+                            <div class="d-flex align-items-center">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope text-primary"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-1">Email</h6>
+                                    <a href="mailto:info@kalingaconsult.com" class="text-decoration-none">info@kalingaconsult.com</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item mb-3">
+                            <div class="d-flex align-items-center">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt text-primary"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-1">Address</h6>
+                                    <span>Plot No. 789/, Tarini Vihar, Bhubaneswar, PIN- 751024</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <hr class="my-4">
+                        
+                        <div class="text-center">
+                            <h6 class="mb-3">Follow Us</h6>
+                            <a href="https://www.facebook.com/share/171puBJKsg/?mibextid=wwXIfr" target="_blank" class="btn btn-outline-primary">
+                                <i class="fab fa-facebook-f me-2"></i>Facebook
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Services Quick List -->
+                <div class="card border-0 shadow">
+                    <div class="card-body p-4">
+                        <h5 class="mb-4">Our Services</h5>
+                        <ul class="list-unstyled">
+                            
+                            <li class="mb-2">
+                                <i class="fas fa-file-alt text-primary me-2"></i>
+                                <small>Detail Project Report (DPR)</small>
+                            </li>
+                            
+                            <li class="mb-2">
+                                <i class="fas fa-helicopter text-primary me-2"></i>
+                                <small>Advance Aerial &amp; Drone Survey</small>
+                            </li>
+                            
+                            <li class="mb-2">
+                                <i class="fas fa-map-marked-alt text-primary me-2"></i>
+                                <small>Geospatial and Hydrological Survey</small>
+                            </li>
+                            
+                            <li class="mb-2">
+                                <i class="fas fa-tasks text-primary me-2"></i>
+                                <small>Project Management Consultant</small>
+                            </li>
+                            
+                            <li class="mb-2">
+                                <i class="fas fa-building text-primary me-2"></i>
+                                <small>Architectural and Building Design</small>
+                            </li>
+                            
+                            <li class="mb-2">
+                                <i class="fas fa-road text-primary me-2"></i>
+                                <small>Highway Design and Report</small>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="display-6 fw-bold">Why Choose Kalinga Konsult?</h2>
+            <p class="lead text-muted">Professional expertise you can trust</p>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-4 text-center">
+                <div class="feature-icon mb-3">
+                    <i class="fas fa-certificate fa-3x text-primary"></i>
+                </div>
+                <h5>Licensed & Certified</h5>
+                <p class="text-muted">Professional engineers with valid licenses and certifications</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="feature-icon mb-3">
+                    <i class="fas fa-clock fa-3x text-primary"></i>
+                </div>
+                <h5>Timely Delivery</h5>
+                <p class="text-muted">Committed to delivering projects on time and within budget</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="feature-icon mb-3">
+                    <i class="fas fa-star fa-3x text-primary"></i>
+                </div>
+                <h5>5+ Years Experience</h5>
+                <p class="text-muted">Proven track record across all districts of Odisha</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <!-- Company Info -->
+                <div class="col-lg-4 mb-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="/static/images/kalinga-logo.png" alt="Kalinga Konsult &amp; Engineers" height="80" class="me-3" style="background: white; padding: 10px; border-radius: 10px;">
+                        <div>
+                            <h5 class="mb-0 text-white">Kalinga Konsult &amp; Engineers</h5>
+                            <small class="text-muted">Construction &amp; Engineering Experts</small>
+                        </div>
+                    </div>
+                    <p class="text-muted">Professional construction and engineering consultancy services with proven expertise and commitment to excellence in every project we undertake.</p>
+                    <div class="d-flex gap-2">
+                        <a href="tel:+918093584917" class="btn btn-outline-light btn-sm">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                        <a href="https://www.facebook.com/share/171puBJKsg/?mibextid=wwXIfr" target="_blank" class="btn btn-outline-light btn-sm">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="mb-3">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="/" class="text-muted text-decoration-none">Home</a></li>
+                        <li><a href="/projects" class="text-muted text-decoration-none">Projects</a></li>
+                        <li><a href="/quotation" class="text-muted text-decoration-none">Quotation</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Services -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h6 class="mb-3">Our Services</h6>
+                    <ul class="list-unstyled">
+                        <li><small class="text-muted">DPR & Project Reports</small></li>
+                        <li><small class="text-muted">Aerial & Drone Survey</small></li>
+                        <li><small class="text-muted">Geotechnical Investigation</small></li>
+                        <li><small class="text-muted">Highway Design</small></li>
+                        <li><small class="text-muted">Project Management</small></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="col-lg-3 mb-4">
+                    <h6 class="mb-3">Contact Info</h6>
+                    <div class="text-muted">
+                        <p class="mb-2">
+                            <i class="fas fa-phone me-2"></i>
+                            <a href="tel:+918093584917" class="text-muted text-decoration-none">+918093584917</a>/<a href="tel:+919040165686" class="text-muted text-decoration-none">+919040165686</a>
+                        </p>
+                        <p class="mb-2">
+                            <i class="fas fa-envelope me-2"></i>
+                            <a href="mailto:info@kalingaconsult.com" class="text-muted text-decoration-none">info@kalingaconsult.com</a>
+                        </p>
+                        <p class="mb-0">
+                            <i class="fas fa-map-marker-alt me-2"></i>
+                            Plot No. 789/, Tarini Vihar, Bhubaneswar, PIN- 751024
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Copyright -->
+            <hr class="my-4">
+            <div class="text-center">
+                <p class="mb-0 text-muted">&copy; 2025 • Made with <i class="fas fa-heart text-danger"></i> by Kalinga Consult Group</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="/static/js/main.js"></script>
+    
+    
+</body>
+</html>

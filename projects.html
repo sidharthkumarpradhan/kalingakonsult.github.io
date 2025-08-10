@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Kalinga Konsult &amp; Engineers</title>
+    <meta name="description" content="Professional construction and engineering consultancy services with 5+ years of expertise across Odisha. Specialized in DPR, aerial surveys, geotechnical investigation, and project management.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link href="/static/css/style.css" rel="stylesheet">
+    
+    
+</head>
+<body>
+    <!-- Navigation Header -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand d-flex align-items-center" href="/">
+                <img src="/static/images/kalinga-logo.png" alt="Kalinga Konsult &amp; Engineers" height="70" class="me-2">
+            </a>
+            
+            <!-- Mobile Toggle -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Navigation Menu -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link " href="/">
+                            <i class="fas fa-home me-1"></i>Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/projects">
+                            <i class="fas fa-building me-1"></i>Projects
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/quotation">
+                            <i class="fas fa-calculator me-1"></i>Quotation
+                        </a>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <a class="btn btn-primary btn-sm" href="tel:+918093584917">
+                            <i class="fas fa-phone me-1"></i>Call Now
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Flash Messages -->
+    
+        
+    
+
+    <!-- Main Content -->
+    <main>
+        
+<!-- Page Header -->
+<section class="page-header bg-primary text-white py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h1 class="display-4 fw-bold mb-3">Our Projects</h1>
+                <p class="lead">Explore our portfolio of successful construction and engineering projects across Odisha</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Portfolio -->
+<section class="py-5">
+    <div class="container">
+        <!-- Filter Buttons -->
+        <div class="text-center mb-5">
+            <div class="btn-group" role="group" aria-label="Project categories">
+                <button type="button" class="btn btn-outline-primary active" data-filter="all">All Projects</button>
+                <button type="button" class="btn btn-outline-primary" data-filter="Infrastructure">Infrastructure</button>
+                <button type="button" class="btn btn-outline-primary" data-filter="Commercial">Commercial</button>
+            </div>
+        </div>
+        
+        <!-- Projects Grid -->
+        <div class="row g-4" id="projects-grid">
+            
+            <div class="col-lg-6 project-item" data-category="Infrastructure">
+                <div class="card project-card h-100 border-0 shadow-sm">
+                    <div class="position-relative">
+                        <img src="https://pixabay.com/get/g819062e2e6404e7f9bfd5892544359004cb86286282c025896eea0c9fc5cb5b4bed47f8cab03e610858ae19423df181b0c1d6d402bf3cb4e994f6513decb43b9_1280.jpg" class="card-img-top project-image" alt="Geotechnical SPT at Tulasipur, Badamba">
+                        <div class="position-absolute top-0 end-0 m-3">
+                            
+                                <span class="badge bg-primary">Ongoing</span>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-light text-dark">Infrastructure</span>
+                            <small class="text-muted">2025</small>
+                        </div>
+                        
+                        <h5 class="card-title mb-3">Geotechnical SPT at Tulasipur, Badamba</h5>
+                        <p class="card-text text-muted mb-3">Standard Penetration Test for bridge approach foundations along rural corridor.</p>
+                        
+                        <div class="project-details">
+                            <div class="row g-2 mb-3">
+                                <div class="col-6">
+                                    <small class="text-muted d-flex align-items-center">
+                                        <i class="fas fa-map-marker-alt me-1"></i>
+                                        Cuttack District, Odisha
+                                    </small>
+                                </div>
+                                <div class="col-6">
+                                    <small class="text-muted d-flex align-items-center">
+                                        <i class="fas fa-building me-1"></i>
+                                        Public Works
+                                    </small>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-primary">Site Investigation</span>
+                                <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#projectModal1">
+                                    <i class="fas fa-eye me-1"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project Modal -->
+            <div class="modal fade" id="projectModal1" tabindex="-1">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Geotechnical SPT at Tulasipur, Badamba</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="https://pixabay.com/get/g819062e2e6404e7f9bfd5892544359004cb86286282c025896eea0c9fc5cb5b4bed47f8cab03e610858ae19423df181b0c1d6d402bf3cb4e994f6513decb43b9_1280.jpg" class="img-fluid rounded mb-4" alt="Geotechnical SPT at Tulasipur, Badamba">
+                            
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <strong>Category:</strong> Infrastructure<br>
+                                    <strong>Location:</strong> Cuttack District, Odisha<br>
+                                    <strong>Year:</strong> 2025
+                                </div>
+                                <div class="col-md-6">
+                                    <strong>Client:</strong> Public Works<br>
+                                    <strong>Area:</strong> Site Investigation<br>
+                                    <strong>Status:</strong> 
+                                    
+                                        <span class="badge bg-primary">Ongoing</span>
+                                    
+                                </div>
+                            </div>
+                            
+                            <p>Standard Penetration Test for bridge approach foundations along rural corridor.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <a href="/quotation" class="btn btn-primary">Get Similar Quote</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6 project-item" data-category="Infrastructure">
+                <div class="card project-card h-100 border-0 shadow-sm">
+                    <div class="position-relative">
+                        <img src="https://pixabay.com/get/ge34a474ee46040ee4b42fe6050dec199f763f9273e68079db08f868506eaf1b154c6e9f45c615905c9c13dd49474b20f2e8d50998caed39bb1bbff124a42ee9d_1280.png" class="card-img-top project-image" alt="Highway Axle Load Survey">
+                        <div class="position-absolute top-0 end-0 m-3">
+                            
+                                <span class="badge bg-success">Completed</span>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-light text-dark">Infrastructure</span>
+                            <small class="text-muted">2024</small>
+                        </div>
+                        
+                        <h5 class="card-title mb-3">Highway Axle Load Survey</h5>
+                        <p class="card-text text-muted mb-3">Weigh-in-motion and axle-load data collection for pavement design and maintenance planning.</p>
+                        
+                        <div class="project-details">
+                            <div class="row g-2 mb-3">
+                                <div class="col-6">
+                                    <small class="text-muted d-flex align-items-center">
+                                        <i class="fas fa-map-marker-alt me-1"></i>
+                                        Odisha State Highways
+                                    </small>
+                                </div>
+                                <div class="col-6">
+                                    <small class="text-muted d-flex align-items-center">
+                                        <i class="fas fa-building me-1"></i>
+                                        Transport Dept.
+                                    </small>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-primary">Traffic Survey</span>
+                                <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#projectModal2">
+                                    <i class="fas fa-eye me-1"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project Modal -->
+            <div class="modal fade" id="projectModal2" tabindex="-1">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Highway Axle Load Survey</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="https://pixabay.com/get/ge34a474ee46040ee4b42fe6050dec199f763f9273e68079db08f868506eaf1b154c6e9f45c615905c9c13dd49474b20f2e8d50998caed39bb1bbff124a42ee9d_1280.png" class="img-fluid rounded mb-4" alt="Highway Axle Load Survey">
+                            
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <strong>Category:</strong> Infrastructure<br>
+                                    <strong>Location:</strong> Odisha State Highways<br>
+                                    <strong>Year:</strong> 2024
+                                </div>
+                                <div class="col-md-6">
+                                    <strong>Client:</strong> Transport Dept.<br>
+                                    <strong>Area:</strong> Traffic Survey<br>
+                                    <strong>Status:</strong> 
+                                    
+                                        <span class="badge bg-success">Completed</span>
+                                    
+                                </div>
+                            </div>
+                            
+                            <p>Weigh-in-motion and axle-load data collection for pavement design and maintenance planning.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <a href="/quotation" class="btn btn-primary">Get Similar Quote</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6 project-item" data-category="Infrastructure">
+                <div class="card project-card h-100 border-0 shadow-sm">
+                    <div class="position-relative">
+                        <img src="https://pixabay.com/get/g80bc1cb81fb9d721bfa324d43b36b861f707abc71d42afbcb6eb51395e47aa4dfd52ee3c5737a4fc885e6f714f19be68ed410882bb9bab87e14347b59295fe09_1280.jpg" class="card-img-top project-image" alt="Bridge Design - CAD Detailing">
+                        <div class="position-absolute top-0 end-0 m-3">
+                            
+                                <span class="badge bg-success">Completed</span>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-light text-dark">Infrastructure</span>
+                            <small class="text-muted">2024</small>
+                        </div>
+                        
+                        <h5 class="card-title mb-3">Bridge Design - CAD Detailing</h5>
+                        <p class="card-text text-muted mb-3">Detailed drawings for piers, deck, and approach structures using industry-standard CAD.</p>
+                        
+                        <div class="project-details">
+                            <div class="row g-2 mb-3">
+                                <div class="col-6">
+                                    <small class="text-muted d-flex align-items-center">
+                                        <i class="fas fa-map-marker-alt me-1"></i>
+                                        Odisha
+                                    </small>
+                                </div>
+                                <div class="col-6">
+                                    <small class="text-muted d-flex align-items-center">
+                                        <i class="fas fa-building me-1"></i>
+                                        Various
+                                    </small>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-primary">Design Engineering</span>
+                                <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#projectModal3">
+                                    <i class="fas fa-eye me-1"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project Modal -->
+            <div class="modal fade" id="projectModal3" tabindex="-1">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Bridge Design - CAD Detailing</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="https://pixabay.com/get/g80bc1cb81fb9d721bfa324d43b36b861f707abc71d42afbcb6eb51395e47aa4dfd52ee3c5737a4fc885e6f714f19be68ed410882bb9bab87e14347b59295fe09_1280.jpg" class="img-fluid rounded mb-4" alt="Bridge Design - CAD Detailing">
+                            
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <strong>Category:</strong> Infrastructure<br>
+                                    <strong>Location:</strong> Odisha<br>
+                                    <strong>Year:</strong> 2024
+                                </div>
+                                <div class="col-md-6">
+                                    <strong>Client:</strong> Various<br>
+                                    <strong>Area:</strong> Design Engineering<br>
+                                    <strong>Status:</strong> 
+                                    
+                                        <span class="badge bg-success">Completed</span>
+                                    
+                                </div>
+                            </div>
+                            
+                            <p>Detailed drawings for piers, deck, and approach structures using industry-standard CAD.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <a href="/quotation" class="btn btn-primary">Get Similar Quote</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6 project-item" data-category="Commercial">
+                <div class="card project-card h-100 border-0 shadow-sm">
+                    <div class="position-relative">
+                        <img src="https://pixabay.com/get/gf41da138f44bc0edba356e7404bfa683b012189b15792849080a4e81b2cd02f4a073c5629811fbc88baf5d69dbc813b503019b5e8a30d9f5b051e85bd4fc3a8f_1280.jpg" class="card-img-top project-image" alt="Architectural Drafting &amp; Visualization">
+                        <div class="position-absolute top-0 end-0 m-3">
+                            
+                                <span class="badge bg-success">Completed</span>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-light text-dark">Commercial</span>
+                            <small class="text-muted">2024</small>
+                        </div>
+                        
+                        <h5 class="card-title mb-3">Architectural Drafting &amp; Visualization</h5>
+                        <p class="card-text text-muted mb-3">Architectural layouts and elevations prepared in AutoCAD with 3D references.</p>
+                        
+                        <div class="project-details">
+                            <div class="row g-2 mb-3">
+                                <div class="col-6">
+                                    <small class="text-muted d-flex align-items-center">
+                                        <i class="fas fa-map-marker-alt me-1"></i>
+                                        Bhubaneswar, Odisha
+                                    </small>
+                                </div>
+                                <div class="col-6">
+                                    <small class="text-muted d-flex align-items-center">
+                                        <i class="fas fa-building me-1"></i>
+                                        Private Clients
+                                    </small>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-primary">Design</span>
+                                <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#projectModal4">
+                                    <i class="fas fa-eye me-1"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project Modal -->
+            <div class="modal fade" id="projectModal4" tabindex="-1">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Architectural Drafting &amp; Visualization</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="https://pixabay.com/get/gf41da138f44bc0edba356e7404bfa683b012189b15792849080a4e81b2cd02f4a073c5629811fbc88baf5d69dbc813b503019b5e8a30d9f5b051e85bd4fc3a8f_1280.jpg" class="img-fluid rounded mb-4" alt="Architectural Drafting &amp; Visualization">
+                            
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <strong>Category:</strong> Commercial<br>
+                                    <strong>Location:</strong> Bhubaneswar, Odisha<br>
+                                    <strong>Year:</strong> 2024
+                                </div>
+                                <div class="col-md-6">
+                                    <strong>Client:</strong> Private Clients<br>
+                                    <strong>Area:</strong> Design<br>
+                                    <strong>Status:</strong> 
+                                    
+                                        <span class="badge bg-success">Completed</span>
+                                    
+                                </div>
+                            </div>
+                            
+                            <p>Architectural layouts and elevations prepared in AutoCAD with 3D references.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <a href="/quotation" class="btn btn-primary">Get Similar Quote</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6 project-item" data-category="Infrastructure">
+                <div class="card project-card h-100 border-0 shadow-sm">
+                    <div class="position-relative">
+                        <img src="https://pixabay.com/get/g5ba8b3aa2bf252e3fa2652a3b6f1ebc7ef891650997c6d6ef47dcae9750487d9070a2ab3987f09262e58b150dc29fd82a6d18dad8662db5913bb29fa199d8540_1280.jpg" class="card-img-top project-image" alt="Total Station Survey">
+                        <div class="position-absolute top-0 end-0 m-3">
+                            
+                                <span class="badge bg-success">Completed</span>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-light text-dark">Infrastructure</span>
+                            <small class="text-muted">2023</small>
+                        </div>
+                        
+                        <h5 class="card-title mb-3">Total Station Survey</h5>
+                        <p class="card-text text-muted mb-3">Topographic survey for corridor mapping and ROW delineation.</p>
+                        
+                        <div class="project-details">
+                            <div class="row g-2 mb-3">
+                                <div class="col-6">
+                                    <small class="text-muted d-flex align-items-center">
+                                        <i class="fas fa-map-marker-alt me-1"></i>
+                                        Odisha
+                                    </small>
+                                </div>
+                                <div class="col-6">
+                                    <small class="text-muted d-flex align-items-center">
+                                        <i class="fas fa-building me-1"></i>
+                                        PWD
+                                    </small>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-primary">Survey</span>
+                                <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#projectModal5">
+                                    <i class="fas fa-eye me-1"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project Modal -->
+            <div class="modal fade" id="projectModal5" tabindex="-1">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Total Station Survey</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="https://pixabay.com/get/g5ba8b3aa2bf252e3fa2652a3b6f1ebc7ef891650997c6d6ef47dcae9750487d9070a2ab3987f09262e58b150dc29fd82a6d18dad8662db5913bb29fa199d8540_1280.jpg" class="img-fluid rounded mb-4" alt="Total Station Survey">
+                            
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <strong>Category:</strong> Infrastructure<br>
+                                    <strong>Location:</strong> Odisha<br>
+                                    <strong>Year:</strong> 2023
+                                </div>
+                                <div class="col-md-6">
+                                    <strong>Client:</strong> PWD<br>
+                                    <strong>Area:</strong> Survey<br>
+                                    <strong>Status:</strong> 
+                                    
+                                        <span class="badge bg-success">Completed</span>
+                                    
+                                </div>
+                            </div>
+                            
+                            <p>Topographic survey for corridor mapping and ROW delineation.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <a href="/quotation" class="btn btn-primary">Get Similar Quote</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6 project-item" data-category="Infrastructure">
+                <div class="card project-card h-100 border-0 shadow-sm">
+                    <div class="position-relative">
+                        <img src="https://pixabay.com/get/gc553eeb7a58544d5e5eea2a45bc06d2641d32bb2fd42340f721decf2936e4e1895a1c1e34c788611e67c20198dd640d4a778fa2e8e507495fe664ab3089f8d0d_1280.jpg" class="card-img-top project-image" alt="Construction Supervision">
+                        <div class="position-absolute top-0 end-0 m-3">
+                            
+                                <span class="badge bg-primary">Ongoing</span>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-light text-dark">Infrastructure</span>
+                            <small class="text-muted">2024</small>
+                        </div>
+                        
+                        <h5 class="card-title mb-3">Construction Supervision</h5>
+                        <p class="card-text text-muted mb-3">Quality monitoring and supervision for RCC works and site execution.</p>
+                        
+                        <div class="project-details">
+                            <div class="row g-2 mb-3">
+                                <div class="col-6">
+                                    <small class="text-muted d-flex align-items-center">
+                                        <i class="fas fa-map-marker-alt me-1"></i>
+                                        Odisha
+                                    </small>
+                                </div>
+                                <div class="col-6">
+                                    <small class="text-muted d-flex align-items-center">
+                                        <i class="fas fa-building me-1"></i>
+                                        Client Confidential
+                                    </small>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-primary">Supervision</span>
+                                <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#projectModal6">
+                                    <i class="fas fa-eye me-1"></i>View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project Modal -->
+            <div class="modal fade" id="projectModal6" tabindex="-1">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Construction Supervision</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="https://pixabay.com/get/gc553eeb7a58544d5e5eea2a45bc06d2641d32bb2fd42340f721decf2936e4e1895a1c1e34c788611e67c20198dd640d4a778fa2e8e507495fe664ab3089f8d0d_1280.jpg" class="img-fluid rounded mb-4" alt="Construction Supervision">
+                            
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <strong>Category:</strong> Infrastructure<br>
+                                    <strong>Location:</strong> Odisha<br>
+                                    <strong>Year:</strong> 2024
+                                </div>
+                                <div class="col-md-6">
+                                    <strong>Client:</strong> Client Confidential<br>
+                                    <strong>Area:</strong> Supervision<br>
+                                    <strong>Status:</strong> 
+                                    
+                                        <span class="badge bg-primary">Ongoing</span>
+                                    
+                                </div>
+                            </div>
+                            
+                            <p>Quality monitoring and supervision for RCC works and site execution.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <a href="/quotation" class="btn btn-primary">Get Similar Quote</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<!-- Services CTA -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="display-6 fw-bold mb-3">Our Core Services</h2>
+            <p class="lead text-muted">Comprehensive engineering and construction solutions</p>
+        </div>
+        
+        <div class="row g-4">
+            
+            <div class="col-lg-3 col-md-6">
+                <div class="text-center">
+                    <div class="service-icon-circle mb-3">
+                        <i class="fas fa-file-alt fa-2x text-primary"></i>
+                    </div>
+                    <h6 class="fw-bold mb-2">Detail Project Report (DPR)</h6>
+                    <small class="text-muted">We offer specialized consultancy for Detailed Project Report...</small>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6">
+                <div class="text-center">
+                    <div class="service-icon-circle mb-3">
+                        <i class="fas fa-helicopter fa-2x text-primary"></i>
+                    </div>
+                    <h6 class="fw-bold mb-2">Advance Aerial &amp; Drone Survey</h6>
+                    <small class="text-muted">We provide expert Aerial and LiDAR survey consulting service...</small>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6">
+                <div class="text-center">
+                    <div class="service-icon-circle mb-3">
+                        <i class="fas fa-map-marked-alt fa-2x text-primary"></i>
+                    </div>
+                    <h6 class="fw-bold mb-2">Geospatial and Hydrological Survey</h6>
+                    <small class="text-muted">We provide specialized geospatial and hydrological survey co...</small>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6">
+                <div class="text-center">
+                    <div class="service-icon-circle mb-3">
+                        <i class="fas fa-tasks fa-2x text-primary"></i>
+                    </div>
+                    <h6 class="fw-bold mb-2">Project Management Consultant</h6>
+                    <small class="text-muted">We offer professional project management consulting services...</small>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6">
+                <div class="text-center">
+                    <div class="service-icon-circle mb-3">
+                        <i class="fas fa-building fa-2x text-primary"></i>
+                    </div>
+                    <h6 class="fw-bold mb-2">Architectural and Building Design</h6>
+                    <small class="text-muted">We provide expert consultancy in architectural and building ...</small>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6">
+                <div class="text-center">
+                    <div class="service-icon-circle mb-3">
+                        <i class="fas fa-road fa-2x text-primary"></i>
+                    </div>
+                    <h6 class="fw-bold mb-2">Highway Design and Report</h6>
+                    <small class="text-muted">We provide expert consultancy in highway design, specializin...</small>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6">
+                <div class="text-center">
+                    <div class="service-icon-circle mb-3">
+                        <i class="fas fa-search fa-2x text-primary"></i>
+                    </div>
+                    <h6 class="fw-bold mb-2">Geotechnical Investigation</h6>
+                    <small class="text-muted">Geotechnical investigation focused on examining physical and...</small>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6">
+                <div class="text-center">
+                    <div class="service-icon-circle mb-3">
+                        <i class="fas fa-flask fa-2x text-primary"></i>
+                    </div>
+                    <h6 class="fw-bold mb-2">Field Exploration &amp; Testing</h6>
+                    <small class="text-muted">Sub Soil exploration (Soil &amp; Rock), Collection of SPT &amp; UDS ...</small>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="text-center mt-5">
+            <a href="/quotation" class="btn btn-primary btn-lg">
+                <i class="fas fa-paper-plane me-2"></i>Request Quotation
+            </a>
+        </div>
+    </div>
+</section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <!-- Company Info -->
+                <div class="col-lg-4 mb-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="/static/images/kalinga-logo.png" alt="Kalinga Konsult &amp; Engineers" height="80" class="me-3" style="background: white; padding: 10px; border-radius: 10px;">
+                        <div>
+                            <h5 class="mb-0 text-white">Kalinga Konsult &amp; Engineers</h5>
+                            <small class="text-muted">Construction &amp; Engineering Experts</small>
+                        </div>
+                    </div>
+                    <p class="text-muted">Professional construction and engineering consultancy services with proven expertise and commitment to excellence in every project we undertake.</p>
+                    <div class="d-flex gap-2">
+                        <a href="tel:+918093584917" class="btn btn-outline-light btn-sm">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                        <a href="https://www.facebook.com/share/171puBJKsg/?mibextid=wwXIfr" target="_blank" class="btn btn-outline-light btn-sm">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6 class="mb-3">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="/" class="text-muted text-decoration-none">Home</a></li>
+                        <li><a href="/projects" class="text-muted text-decoration-none">Projects</a></li>
+                        <li><a href="/quotation" class="text-muted text-decoration-none">Quotation</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Services -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h6 class="mb-3">Our Services</h6>
+                    <ul class="list-unstyled">
+                        <li><small class="text-muted">DPR & Project Reports</small></li>
+                        <li><small class="text-muted">Aerial & Drone Survey</small></li>
+                        <li><small class="text-muted">Geotechnical Investigation</small></li>
+                        <li><small class="text-muted">Highway Design</small></li>
+                        <li><small class="text-muted">Project Management</small></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="col-lg-3 mb-4">
+                    <h6 class="mb-3">Contact Info</h6>
+                    <div class="text-muted">
+                        <p class="mb-2">
+                            <i class="fas fa-phone me-2"></i>
+                            <a href="tel:+918093584917" class="text-muted text-decoration-none">+918093584917</a>/<a href="tel:+919040165686" class="text-muted text-decoration-none">+919040165686</a>
+                        </p>
+                        <p class="mb-2">
+                            <i class="fas fa-envelope me-2"></i>
+                            <a href="mailto:info@kalingaconsult.com" class="text-muted text-decoration-none">info@kalingaconsult.com</a>
+                        </p>
+                        <p class="mb-0">
+                            <i class="fas fa-map-marker-alt me-2"></i>
+                            Plot No. 789/, Tarini Vihar, Bhubaneswar, PIN- 751024
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Copyright -->
+            <hr class="my-4">
+            <div class="text-center">
+                <p class="mb-0 text-muted">&copy; 2025 • Made with <i class="fas fa-heart text-danger"></i> by Kalinga Consult Group</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="/static/js/main.js"></script>
+    
+    
+<script>
+// Project filtering functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('[data-filter]');
+    const projectItems = document.querySelectorAll('.project-item');
+    
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const filter = this.getAttribute('data-filter');
+            
+            // Update active button
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+            
+            // Filter projects
+            projectItems.forEach(item => {
+                if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    });
+});
+</script>
+
+</body>
+</html>
