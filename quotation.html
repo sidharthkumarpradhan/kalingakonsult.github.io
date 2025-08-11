@@ -103,8 +103,8 @@
                     <div class="card-body p-4">
                         <h3 class="mb-4">Project Details</h3>
                         
-                        <form method="POST" novalidate>
-                            <input id="csrf_token" name="csrf_token" type="hidden" value="IjU1MzY3MTM5ZTQ4NWU5ZDE0NmIyNTVmY2M5ZTgwOWI5OWZmZTkzNzci.aJlHrg.4m7sdDw0a7QiuxWJpV2dI7OMPSU">
+                        <form onsubmit="handleFormSubmit(event)" method="post">
+                            <input id="csrf_token" name="csrf_token" type="hidden" value="IjhjNWM0ZGYxZmMwODJiMTgyMTI5NmFlZWI5MjEzYWQyYWUyMTBkMDAi.aJlKHQ.yvtBFwJ_8c-p_yrpuoEO-nAK8fU">
                             
                             <div class="row g-3">
                                 <!-- Personal Information -->
@@ -396,5 +396,75 @@
     <script src="static/js/main.js"></script>
     
     
-</body>
+
+    <script>
+    function handleFormSubmit(event) {
+        event.preventDefault();
+        
+        // Get form data
+        const formData = new FormData(event.target);
+        const name = formData.get('name') || 'Client';
+        const email = formData.get('email') || '';
+        const phone = formData.get('phone') || '';
+        const company = formData.get('company') || '';
+        const projectType = formData.get('project_type') || '';
+        const location = formData.get('project_location') || '';
+        const budget = formData.get('budget_range') || '';
+        const timeline = formData.get('timeline') || '';
+        const description = formData.get('project_description') || '';
+        
+        // Create email body
+        const emailBody = `Hello,
+
+I would like to request a quotation for the following project:
+
+Name: ${name}
+Email: ${email}
+Phone: ${phone}
+Company: ${company}
+
+Project Details:
+- Type: ${projectType}
+- Location: ${location}
+- Budget Range: ${budget}
+- Timeline: ${timeline}
+
+Project Description:
+${description}
+
+Best regards,
+${name}`;
+        
+        // Create mailto link
+        const subject = encodeURIComponent(`Quotation Request from ${name}`);
+        const body = encodeURIComponent(emailBody);
+        const mailtoLink = `mailto:info@kalingakonsult.in?subject=${subject}&body=${body}`;
+        
+        // Show success message
+        const alertDiv = document.createElement('div');
+        alertDiv.className = 'alert alert-success alert-dismissible fade show';
+        alertDiv.innerHTML = `
+            <strong>Thank you for your request!</strong> 
+            <br>Your email client will open with a pre-filled message. 
+            <br>Please send the email to complete your quotation request.
+            <br><br>
+            <strong>Alternative:</strong> Call us directly at <a href="tel:+918280107276">+91 8280107276</a>
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        `;
+        
+        // Insert alert before the form
+        const form = event.target;
+        form.parentNode.insertBefore(alertDiv, form);
+        
+        // Open email client
+        window.location.href = mailtoLink;
+        
+        // Reset form
+        form.reset();
+        
+        // Scroll to alert
+        alertDiv.scrollIntoView({ behavior: 'smooth' });
+    }
+    </script>
+    </body>
 </html>
