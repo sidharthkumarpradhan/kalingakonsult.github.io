@@ -17,7 +17,7 @@ Kalinga Konsult & Engineers is an Odisha-based civil engineering consulting firm
 
 ### Contact Information
 - **Phone**: +918093584917/+919040165686
-- **Email**: info@kalingaconsult.com
+- **Email**: info@kalingakonsult.in
 - **Address**: Plot No. 789/, Tarini Vihar, Bhubaneswar, PIN- 751024
 - **Facebook**: [Kalinga Konsult on Facebook](https://www.facebook.com/share/171puBJKsg/?mibextid=wwXIfr)
 

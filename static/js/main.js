@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initPartnersMarquee();
     initLazyLoading();
     initAnimations();
+    initNavbarShrink();
     
     // Smooth scrolling for anchor links
     function initSmoothScrolling() {
@@ -323,7 +324,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Console welcome message
     console.log('%c🏗️ Kalinga Konsult & Engineers', 'color: #0066cc; font-size: 16px; font-weight: bold;');
     console.log('%cProfessional Construction & Engineering Services', 'color: #666; font-size: 12px;');
-    console.log('%cWebsite: https://kalingaconsult.com', 'color: #666; font-size: 12px;');
+    console.log('%cWebsite: https://kalingakonsult.in', 'color: #666; font-size: 12px;');
 });
 
 // Utility functions
@@ -386,6 +387,21 @@ function playVideo(button) {
     if (video) {
         video.play();
         button.parentElement.style.display = 'none';
+    }
+}
+
+// Navbar shrink on scroll
+function initNavbarShrink() {
+    const navbar = document.querySelector('.navbar');
+    
+    if (navbar) {
+        window.addEventListener('scroll', throttle(() => {
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        }, 16)); // 60fps throttling
     }
 }
 
