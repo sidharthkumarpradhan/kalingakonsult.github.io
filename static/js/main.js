@@ -315,11 +315,62 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize back to top
     initBackToTop();
     
-    // Initialize video functionality
-    initVideoPlayer();
+    // Video optimization and error handling
+    function initVideoOptimization() {
+        const videos = document.querySelectorAll('video');
+        videos.forEach(video => {
+            // Handle video loading errors
+            video.addEventListener('error', function() {
+                console.log('Video loading error, showing fallback');
+                const fallback = this.nextElementSibling;
+                if (fallback && fallback.classList.contains('d-flex')) {
+                    this.style.display = 'none';
+                    fallback.style.display = 'flex';
+                }
+            });
+            
+            // Handle loading states
+            video.addEventListener('loadstart', function() {
+                console.log('Video loading started');
+            });
+            
+            video.addEventListener('canplay', function() {
+                console.log('Video can start playing');
+            });
+            
+            // Lazy loading for better performance
+            if ('IntersectionObserver' in window) {
+                const videoObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const video = entry.target;
+                            if (video.getAttribute('preload') === 'none') {
+                                video.setAttribute('preload', 'metadata');
+                                console.log('Video preload set to metadata');
+                            }
+                            videoObserver.unobserve(video);
+                        }
+                    });
+                });
+                videoObserver.observe(video);
+            }
+        });
+    }
     
-    // Initialize video functionality
-    initVideoPlayer();
+    // Play video function for overlay button
+    window.playVideo = function(button) {
+        const video = button.closest('.position-relative').querySelector('video');
+        if (video) {
+            video.play().then(() => {
+                button.parentElement.style.display = 'none';
+            }).catch(err => {
+                console.log('Error playing video:', err);
+            });
+        }
+    };
+
+    // Initialize video optimization
+    initVideoOptimization();
     
     // Console welcome message
     console.log('%c🏗️ Kalinga Konsult & Engineers', 'color: #0066cc; font-size: 16px; font-weight: bold;');
