@@ -104,7 +104,7 @@
                         <h3 class="mb-4">Project Details</h3>
                         
                         <form onsubmit="handleFormSubmit(event)" method="post">
-                            <input id="csrf_token" name="csrf_token" type="hidden" value="IjhjNWM0ZGYxZmMwODJiMTgyMTI5NmFlZWI5MjEzYWQyYWUyMTBkMDAi.aJlKHQ.yvtBFwJ_8c-p_yrpuoEO-nAK8fU">
+                            <input id="csrf_token" name="csrf_token" type="hidden" value="IjM5MTkxM2ExNjU2NThkNzg2YTViOTc1YTRlNzYzNzc5MTIyNDM4ZjMi.aJlMHQ.IYBpOwOx0tU_fPq-8baEFTuantQ">
                             
                             <div class="row g-3">
                                 <!-- Personal Information -->
@@ -401,19 +401,40 @@
     function handleFormSubmit(event) {
         event.preventDefault();
         
-        // Get form data
+        // Get form data for validation
         const formData = new FormData(event.target);
-        const name = formData.get('name') || 'Client';
-        const email = formData.get('email') || '';
-        const phone = formData.get('phone') || '';
-        const company = formData.get('company') || '';
-        const projectType = formData.get('project_type') || '';
-        const location = formData.get('project_location') || '';
-        const budget = formData.get('budget_range') || '';
-        const timeline = formData.get('timeline') || '';
-        const description = formData.get('project_description') || '';
+        const name = formData.get('name');
+        const email = formData.get('email');
+        const phone = formData.get('phone');
+        const projectType = formData.get('project_type');
+        const projectLocation = formData.get('project_location');
+        const projectDescription = formData.get('project_description');
+        const budgetRange = formData.get('budget_range');
+        const timeline = formData.get('timeline');
         
-        // Create email body
+        // Basic validation
+        if (!name || !email || !phone || !projectType || !projectLocation || !projectDescription || !budgetRange || !timeline) {
+            alert('Please fill in all required fields.');
+            return;
+        }
+        
+        // Store form data in localStorage for thank you page
+        const quotationData = {
+            name: name,
+            email: email,
+            phone: phone,
+            company: formData.get('company') || '',
+            project_type: projectType,
+            project_location: projectLocation,
+            project_description: projectDescription,
+            budget_range: budgetRange,
+            timeline: timeline,
+            submitted_at: new Date().toISOString()
+        };
+        
+        localStorage.setItem('quotationData', JSON.stringify(quotationData));
+        
+        // Create email body for fallback
         const emailBody = `Hello,
 
 I would like to request a quotation for the following project:
@@ -421,49 +442,30 @@ I would like to request a quotation for the following project:
 Name: ${name}
 Email: ${email}
 Phone: ${phone}
-Company: ${company}
+Company: ${formData.get('company') || 'N/A'}
 
 Project Details:
 - Type: ${projectType}
-- Location: ${location}
-- Budget Range: ${budget}
+- Location: ${projectLocation}
+- Budget Range: ${budgetRange}
 - Timeline: ${timeline}
 
 Project Description:
-${description}
+${projectDescription}
 
 Best regards,
 ${name}`;
         
-        // Create mailto link
+        // Create mailto link as backup
         const subject = encodeURIComponent(`Quotation Request from ${name}`);
         const body = encodeURIComponent(emailBody);
         const mailtoLink = `mailto:info@kalingakonsult.in?subject=${subject}&body=${body}`;
         
-        // Show success message
-        const alertDiv = document.createElement('div');
-        alertDiv.className = 'alert alert-success alert-dismissible fade show';
-        alertDiv.innerHTML = `
-            <strong>Thank you for your request!</strong> 
-            <br>Your email client will open with a pre-filled message. 
-            <br>Please send the email to complete your quotation request.
-            <br><br>
-            <strong>Alternative:</strong> Call us directly at <a href="tel:+918280107276">+91 8280107276</a>
-            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-        `;
+        // Store mailto link for thank you page
+        localStorage.setItem('mailtoLink', mailtoLink);
         
-        // Insert alert before the form
-        const form = event.target;
-        form.parentNode.insertBefore(alertDiv, form);
-        
-        // Open email client
-        window.location.href = mailtoLink;
-        
-        // Reset form
-        form.reset();
-        
-        // Scroll to alert
-        alertDiv.scrollIntoView({ behavior: 'smooth' });
+        // Redirect to thank you page
+        window.location.href = 'thank-you.html';
     }
     </script>
     </body>
